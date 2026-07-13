@@ -3,9 +3,20 @@
   "id": "mastodon-rss-tas",
   "repo": "mastodon-rss-tas-stack-module",
   "lifecycle": "active",
-  "dependencies": ["mastodon-rss-publisher"],
+  "dependencies": [
+    "mastodon-rss-publisher"
+  ],
   "smoke": "unsupported",
   "smokeUnsupportedReason": "content-only RSS pack consumed by the self-hosted publisher",
-  "overlays": ["stack.config/mastodon-rss/feeds.d/tas.json", "stack.config/mastodon/bootstrap-follows.d/rss-tas.txt"],
-  "testAssets": []
+  "overlays": [
+    "stack.config/mastodon-rss/feeds.d/tas.json",
+    "stack.config/mastodon/bootstrap-follows.d/rss-tas.txt"
+  ],
+  "testAssets": [],
+  "runtimeDependencies": [
+    "mastodon-rss-publisher"
+  ],
+  "contracts": [
+    "module-contract"
+  ]
 }
